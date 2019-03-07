@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block contents %}
+    {% for blog in blog.all %}
+
+    <img src="{{blog.image.url}}" width = 500 >
+    <br>
+    {{blog.text}}
+    
+    <img src="{{blog.image_thumbnail.url}}">
+    {% endfor %}
+{% endblock %}
